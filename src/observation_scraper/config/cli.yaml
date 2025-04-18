@@ -1,0 +1,12 @@
+cli:
+  base_url: "https://forecast.weather.gov/product.php"
+  default_params:
+    product: "CLI"
+    format: "CI"
+    version: "1"
+    glossary: "0"
+  locations:
+    KNYC:
+      site: "OKX"
+      issuedby: "NYC"
+      name: "New York City Central Park"
