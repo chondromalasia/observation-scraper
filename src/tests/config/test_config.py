@@ -36,6 +36,10 @@ class TestConfig(unittest.TestCase):
 
         self.assertIn('cli', self.c.cli_config)
 
+    def test_kafka_loader(self):
+        self.assertIn('bootstrap_servers', self.c.kafka_config.keys())
+
+
 
 if __name__ == "__main__":
     unittest.main()

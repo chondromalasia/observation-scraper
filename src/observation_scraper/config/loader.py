@@ -14,8 +14,10 @@ class Config:
         self.config_dir = Path(__file__).parent
 
         self.cli_config = self.load_yaml(self.config_dir / 'cli.yaml')
+        self.kafka_config = self.load_yaml(self.config_dir / 'kafka.yaml')
 
     def load_yaml(self, file_path: str) -> Dict[str, Any]:
         """Load YAML file."""
         with open(file_path, 'r') as f:
             return yaml.safe_load(f)
+

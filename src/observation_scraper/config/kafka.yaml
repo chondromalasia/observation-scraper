@@ -1,0 +1,2 @@
+bootstrap_servers: "weather-kafka-cluster-kafka-bootstrap.kafka.svc.cluster.local:9092"
+topic: "observations"
