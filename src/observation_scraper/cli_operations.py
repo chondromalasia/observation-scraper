@@ -181,5 +181,5 @@ def send_dummy_beat():
 
     topic = config.get('topic')
 
-    return publish_beats_to_kafka(dummy_beats, topic='observations')
+    return publish_beats_to_kafka(beats=dummy_beats, topic='observations')
     
