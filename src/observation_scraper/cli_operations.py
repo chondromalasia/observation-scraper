@@ -135,7 +135,7 @@ def publish_beats_to_kafka(
     try:
         count = 0
         for beat in beats:
-            producer.send_beat(beat, topic=topic)
+            producer.send_beat(beat=beat, topic=topic)
             count += 1
         producer.producer.flush()
         return count
