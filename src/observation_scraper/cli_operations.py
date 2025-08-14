@@ -5,7 +5,7 @@ from observation_scraper.config.loader import Config
 from observation_scraper.scrapers.cli import CLIScraper
 from observation_scraper.parsers.cli import CLIParser
 from observation_scraper.models.climate_data import CLIData, KafkaBeat
-from .producers.producer import ObservationProducer
+from observation_scraper.producers.producer import ObservationProducer
 
 def get_climate_data(location_key: str) -> CLIData:
     """
