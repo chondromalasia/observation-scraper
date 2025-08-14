@@ -179,5 +179,7 @@ def send_dummy_beat():
 
     dummy_beats = list(create_test_beat())
 
-    return publish_beats_to_kafka(dummy_beats, topic=config.get('topic'))
+    topic = config.get('topic')
+
+    return publish_beats_to_kafka(dummy_beats, topic='observations')
     
