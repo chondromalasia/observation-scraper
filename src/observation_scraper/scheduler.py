@@ -1,8 +1,16 @@
-import schedule
 import time
+import sys
 import logging
 
+import schedule
+
 from observation_scraper.cli_operations import get_and_publish_kafka_beats
+
+logging.basicConfig(
+    level=logging.INFO,
+    stream=sys.stdout,
+    force=True
+    )
 
 logger = logging.getLogger(__name__)
 
