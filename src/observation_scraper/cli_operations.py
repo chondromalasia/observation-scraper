@@ -159,27 +159,3 @@ def get_and_publish_kafka_beats(location_key: str, topic: str) -> int:
     beats = format_kafka_beats(climate_data)
     
     return publish_beats_to_kafka(beats, topic=topic)
-
-def create_test_beat() -> KafkaBeat:
-    """Create a test weather observation beat."""
-    return KafkaBeat(
-        measurement_type="temperature",
-        value=22.5,
-        unit="celsius", 
-        observation_type="test_deployment",
-        timestamp=datetime.utcnow().isoformat() + "Z",
-        station_id="DEPLOYMENT_TEST_STATION",
-        service="kubernetes_deployment_test",
-        period="test"
-    )
-
-def send_dummy_beat():
-
-    config = Config().kafka_config
-
-    dummy_beats = [create_test_beat()]
-
-    topic = config.get('topic')
-
-    return publish_beats_to_kafka(beats=dummy_beats, topic='observations')
-    
